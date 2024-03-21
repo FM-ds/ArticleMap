@@ -124,6 +124,7 @@ body { margin: 0; padding: 0; }
             const title = e.features[0].properties.title;
             const url = e.features[0].properties.url;
             const reason = e.features[0].properties.reason;
+            const location = e.features[0].properties.location;
 
             // Ensure that if the map is zoomed out such that
             // multiple copies of the feature are visible, the
@@ -136,6 +137,7 @@ body { margin: 0; padding: 0; }
                 .setLngLat(coordinates)
                 .setHTML(
                     `<h3>${title}</h3><p><a href="${url}" target="_blank">Read more</a></p>
+                    <h4>${location}
                     <p>${reason}</p>
                     
                     `
